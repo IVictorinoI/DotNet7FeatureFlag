@@ -1,0 +1,8 @@
+obj/
+bin/
+v17/
+FileContentIndex/
+.vs/
+packages/
+*.user
+*.suo
