@@ -1,4 +1,11 @@
+using DotNet7FeatureFlag.App.Repository.Db;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var Configuration = builder.Configuration;
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
